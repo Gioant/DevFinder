@@ -626,6 +626,10 @@ video {
   height: 1.25rem;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .w-8 {
   width: 2rem;
 }
@@ -658,8 +662,32 @@ video {
   align-items: center;
 }
 
+.justify-normal {
+  justify-content: normal;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .rounded-lg {
