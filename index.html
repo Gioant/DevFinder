@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="./src/css/output.css">
 </head>
 
-<body class="font-space-mono text-base">
-    <main class="flex flex-col h-screen">
+<body id="body" class="font-space-mono text-base bg-ghost-white">
+    <main class="flex flex-col h-screen gap-4 justify-center w-11/12 mx-auto">
         <div class="flex flex-row justify-between">
             <h1 class="font-bold">devfinder</h1>
             <div class="flex flex-row gap-4">
-                <p>Dark</p>
+                <p class="text-dark-blue font-bold tracking-[.2em] text-sm">DARK</p>
                 <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M19.513 11.397a.701.701 0 00-.588.128 7.496 7.496 0 01-2.276 1.336 7.101 7.101 0 01-2.583.462 7.505 7.505 0 01-5.32-2.209 7.568 7.568 0 01-2.199-5.342c0-.873.154-1.72.41-2.49a6.904 6.904 0 011.227-2.21.657.657 0 00-.102-.924.701.701 0 00-.589-.128C5.32.61 3.427 1.92 2.072 3.666A10.158 10.158 0 000 9.83c0 2.8 1.125 5.342 2.967 7.19a10.025 10.025 0 007.16 2.98c2.353 0 4.527-.822 6.266-2.183a10.13 10.13 0 003.58-5.624.623.623 0 00-.46-.796z"
@@ -28,22 +28,28 @@
 
         <form>
             <div class="relative">
-                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg height="24" width="25" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M10.609 0c5.85 0 10.608 4.746 10.608 10.58 0 2.609-.952 5-2.527 6.847l5.112 5.087a.87.87 0 01-1.227 1.233l-5.118-5.093a10.58 10.58 0 01-6.848 2.505C4.759 21.16 0 16.413 0 10.58 0 4.747 4.76 0 10.609 0zm0 1.74c-4.891 0-8.87 3.965-8.87 8.84 0 4.874 3.979 8.84 8.87 8.84a8.855 8.855 0 006.213-2.537l.04-.047a.881.881 0 01.058-.053 8.786 8.786 0 002.558-6.203c0-4.875-3.979-8.84-8.87-8.84z"
-                            fill="#0079ff" />
-                    </svg>
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+                    <img class="w-5" src="./assets/icon-search.svg" alt="icon-search">
                 </div>
-                <input type="search" id="username-search"
-                    class="block w-full p-4 pl-10 pr-24 text-sm text-gray-900 rounded-lg bg-gray-50  outline-light-blue"
+                
+                <input type="search" id="username-search" class="block w-full p-4 pl-10 pr-20 text-xs text-gray-900 rounded-lg bg-white  outline-light-blue"
                     placeholder="Search Github Username..." required>
-                <button type="submit"
-                    class="text-white bg-blue absolute right-2 bottom-2 bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-4 py-2">Search</button>
+                <button type="submit" class="text-white bg-blue absolute right-1 bottom-1.5 bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-3.5 py-2">Search</button>
             </div>
         </form>
 
-
+        <div class="bg-white rounded-lg">
+            <section>
+                <div>
+                    <img id="user-pic" class="rounded-full w-1/6" src="./assets/octocat.png" alt="github-profile-pic">
+                    <div>
+                        <h2>The Octocat</h2>
+                        <h3>@octocat</h3>
+                        <h4>Joined 25 Jan 2011</h4>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 
