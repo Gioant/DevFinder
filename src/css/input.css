@@ -6,4 +6,7 @@
     .card-stats {
         @apply flex flex-col gap-2;
     }
+    .github-info {
+        @apply font-bold text-space-cadet text-sm;
+    }
 }
