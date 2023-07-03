@@ -35,7 +35,7 @@
             </div>
         </form>
 
-        <div class="bg-white rounded-lg px-4 py-6">
+        <div class="bg-white rounded-lg px-5 py-6">
             <section>
                 <div class="flex flex-row gap-4">
                     <img id="user-pic" class="rounded-full w-16" src="./assets/octocat.png" alt="github-profile-pic">
@@ -46,41 +46,49 @@
                     </div>
                 </div>
 
-                <p class="font-mono text-xs text-glaucous opacity-50 py-6" id="bio">
+                <p class="font-mono text-xs text-glaucous opacity-50 py-8" id="bio">
                     This profile has no bio
                 </p>
 
-                <div class="bg-ghost-white rounded-lg text-xs py-4 flex justify-around text-center">
+                <div class="bg-ghost-white rounded-lg text-xs py-6 flex justify-around text-center">
                     <div class="card-stats">
-                        <p>Repos</p>
-                        <span class="github-info">8</span>
+                        <p class="text-glaucous">Repos</p>
+                        <span class="github-info" id="repo-info">8</span>
                     </div>
 
                     <div class="card-stats">
-                        <p>Followers</p>
-                        <span class="github-info">3938</span>
+                        <p class="text-glaucous">Followers</p>
+                        <span class="github-info" id="followers-info">3938</span>
                     </div>
 
                     <div class="card-stats">
-                        <p>Following</p>
-                        <span class="github-info">9</span>
+                        <p class="text-glaucous">Following</p>
+                        <span class="github-info" id="following-info">9</span>
                     </div>
                 </div>
 
-                <!-- TO DO: CUSTOM LINKS  -->
-                <div class="flex">
-                    <ul>
-                        <li></li>
 
-                        <li></li>
+                    <ul class="flex flex-col gap-4 font-mono text-xs text-glaucous pt-6">
+                        <li class="flex align-middle gap-2">
+                            <img class="pl-1" src="./assets/icon-location.svg" alt="location-icon" id="loc-icon">
+                            <p id="user-location">San Francisco</p>
+                        </li>
 
-                        <li></li>
+                        <li class="flex align-middle gap-2">
+                            <img src="./assets/icon-website.svg" alt="website-icon" id="site-icon">
+                            <p id="user-website">https://github.blog</p>
+                        </li>
 
-                        <li></li>
+                        <li class="flex align-middle gap-2">
+                            <img src="./assets/icon-twitter.svg" alt="twitter-icon" id="twitter-icon">
+                            <p id="user-twitter">Not Available</p>
+                        </li>
 
-                        <li></li>
+                        <li class="flex align-middle gap-2">
+                            <img src="./assets/icon-company.svg" alt="company-icon" id="company-icon">
+                            <p id="user-company">@github</p>
+                        </li>
                     </ul>
-                </div>
 
             </section>
         </div>
