@@ -13,25 +13,26 @@
 </head>
 
 <body id="body" class="font-space-mono text-base bg-ghost-white">
-    <main class="flex flex-col h-screen gap-4 justify-center w-11/12 mx-auto">
+    <main class="flex flex-col h-screen gap-4 md:gap-8 justify-center w-11/12 mx-auto md:w-1/2 xl:w-2/5">
         
         <div class="flex flex-row justify-between">
             <h1 class="font-bold">devfinder</h1>
             <div class="flex flex-row gap-4">
-                <p class="text-true-blue font-bold tracking-[.2em] text-sm">DARK</p>
-                <img class="h-5" src="./assets/icon-moon.svg" alt="color-theme-icon">
+                <p class="text-true-blue font-bold tracking-[.2em] text-xs">DARK</p>
+                <img class="h-4" src="./assets/icon-moon.svg" alt="color-theme-icon">
             </div>
         </div>
 
         <form>
-            <div class="relative rounded-3xl">
-                <div class="absolute inset-y-0 left-0 flex items-center pl-2">
+            <div class="relative">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-4 md:pl-5">
                     <img class="w-5" src="./assets/icon-search.svg" alt="icon-search">
                 </div>
 
-                <input type="search" id="username-search" class="block w-full p-4 pl-9 pr-24 text-xs text-gray-900 rounded-lg bg-white outline-none"
+                <input type="search" id="username-search" class="block w-full p-4 pl-12 pr-24 text-xs text-gray-900 rounded-xl bg-white outline-none 
+                md:pl-14 md:text-base md:pr-32"
                     placeholder="Search Github Username..." required>
-                <button type="submit" class="text-white bg-blue absolute right-1.5 bottom-1.5 hover:bg-blue-800 rounded-lg text-sm px-3.5 py-2">Search</button>
+                <button type="submit" class="text-white bg-blue absolute right-1.5 bottom-1.5 hover:bg-blue-800 rounded-lg text-sm px-3.5 py-3 md:px-5 md:py-3">Search</button>
             </div>
         </form>
 
