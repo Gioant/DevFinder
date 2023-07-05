@@ -12,41 +12,46 @@
     <link rel="stylesheet" href="./src/css/output.css">
 </head>
 
-<body id="body" class="font-space-mono text-base bg-ghost-white">
-    <main class="flex flex-col h-screen gap-4 md:gap-8 justify-center w-11/12 mx-auto md:w-1/2 xl:w-2/5">
-        
-        <div class="flex flex-row justify-between">
-            <p class="font-bold text-xl">devfinder</p>
-            <div class="flex flex-row gap-4">
-                <p class="text-true-blue font-bold tracking-[.2em] text-xs md:text-sm">DARK</p>
-                <img class="h-4 md:h-5" src="./assets/icon-moon.svg" alt="color-theme-icon">
-            </div>
+<body id="body" class="font-space-mono text-base bg-ghost-white flex justify-center items-center py-[75px] px-24 min-h-screen">
+    <main class="scroll-smooth max-w-[730px] w-full m-0 mx-auto">
+
+        <div class="flex justify-between items-center">
+            <p class="font-bold text-xl xl:text-3xl">devfinder</p>
+            <button class="flex justify-center items-center p-[2.5px] gap-4">
+                <span class="text-true-blue font-bold tracking-[.2em] text-xs md:text-sm" id="theme">DARK</span>
+                
+                <img class="h-5" id="theme-icon-dark" src="./assets/icon-moon.svg" alt="dark-theme-icon">
+                <img class="h-5 hidden" id="theme-icon-light" src="./assets/icon-sun.svg" alt="light-theme-icon">
+            </button>
         </div>
 
         <form>
             <div class="relative">
-                <input type="search" id="username-search" class="block w-full p-4 pl-12 pr-24 text-xs text-gray-900 rounded-2xl bg-white outline-none 
-                md:pl-14 md:text-base md:pr-32 md:p-6 " placeholder="Search Github Username..." required 
-                style="background-image: url('./assets/icon-search.svg'); background-size: 1.5rem; background-repeat: no-repeat; 
+                <input type="search" id="username-search" class="block w-full p-5 pl-12 pr-24 text-xs text-gray-900 rounded-2xl bg-white outline-none 
+                md:pl-14 md:text-base md:pr-32" placeholder="Search Github Username..." required style="background-image: url('./assets/icon-search.svg'); background-size: 1.5rem; background-repeat: no-repeat; 
                 background-position-x: 1.25rem; background-position-y: center;">
 
-                <button type="submit" class="text-white font-bold bg-blue absolute right-3 bottom-3 hover:bg-blue-800 rounded-lg text-sm 
-                px-3.5 py-3 md:px-6 md:py-4">Search</button>
+                <button type="submit" class="text-white bg-blue absolute right-1.5 bottom-1.5 hover:bg-blue-800 rounded-lg text-sm 
+                px-3.5 py-3 md:px-6 md:py-4 md:font-bold">Search</button>
             </div>
         </form>
 
-        <div class="bg-white rounded-lg px-5 py-6">
-            <section>
-                <div class="flex flex-row gap-4">
-                    <img id="user-pic" class="rounded-full w-16 md:w-28" src="./assets/octocat.png" alt="github-profile-pic">
-                    <div>
-                        <h2 class="font-bold text-lg" id="Name">The Octocat</h2>
-                        <p class="text-sm text-sky-500 md:text-base" id="username">@octocat</p>
-                        <p class="text-sm text-glaucous md:text-base" id="date-joined">Joined 25 Jan 2011</p>
+        <div class="bg-white rounded-2xl p-8">
+            <section class="flex flex-col gap-5 justify-evenly">
+                <div class="flex gap-5">
+                    <img id="user-pic" class="rounded-full w-16" 
+                    src="./assets/octocat.png" alt="github-profile-pic">
+
+                    <div class="flex flex-row justify-between w-full">
+                        <div class="flex flex-col justify-between md:justify-start">
+                            <h2 class="font-bold text-lg text-gunmetal xl:text-[26px]" id="Name">The Octocat</h2>
+                            <p class="text-sm text-sky-500 md:text-base" id="username">@octocat</p>
+                        </div>
+                        <p class="text-sm text-glaucous pt-1 md:text-base" id="date-joined">Joined 25 Jan 2011</p>
                     </div>
                 </div>
 
-                <p class="font-mono text-xs text-glaucous opacity-50 py-8 md:text-sm" id="bio">
+                <p class="font-mono text-xs text-glaucous opacity-50 py-6 md:text-sm" id="bio">
                     This profile has no bio
                 </p>
 
@@ -68,31 +73,34 @@
                 </div>
 
 
-                    <ul class="flex flex-col gap-4 font-mono text-xs text-glaucous pt-6 md:text-base">
-                        <li class="flex align-middle gap-2">
-                            <img class="pl-1" src="./assets/icon-location.svg" alt="location-icon" id="loc-icon">
-                            <p id="user-location">San Francisco</p>
-                        </li>
+                <ul class="flex flex-col gap-4 font-mono text-xs text-glaucous pt-6 md:text-base">
+                    <li class="flex align-middle gap-2">
+                        <img class="pl-1" src="./assets/icon-location.svg" alt="location-icon" id="loc-icon">
+                        <p id="user-location">San Francisco</p>
+                    </li>
 
-                        <li class="flex align-middle gap-2">
-                            <img src="./assets/icon-website.svg" alt="website-icon" id="site-icon">
-                            <p id="user-website">https://github.blog</p>
-                        </li>
+                    <li class="flex align-middle gap-2">
+                        <img src="./assets/icon-website.svg" alt="website-icon" id="site-icon">
+                        <p id="user-website">https://github.blog</p>
+                    </li>
 
-                        <li class="flex align-middle gap-2">
-                            <img src="./assets/icon-twitter.svg" alt="twitter-icon" id="twitter-icon">
-                            <p id="user-twitter">Not Available</p>
-                        </li>
+                    <li class="flex align-middle gap-2">
+                        <img src="./assets/icon-twitter.svg" alt="twitter-icon" id="twitter-icon">
+                        <p id="user-twitter">Not Available</p>
+                    </li>
 
-                        <li class="flex align-middle gap-2">
-                            <img src="./assets/icon-company.svg" alt="company-icon" id="company-icon">
-                            <p id="user-company">@github</p>
-                        </li>
-                    </ul>
+                    <li class="flex align-middle gap-2">
+                        <img src="./assets/icon-company.svg" alt="company-icon" id="company-icon">
+                        <p id="user-company">@github</p>
+                    </li>
+                </ul>
 
             </section>
         </div>
     </main>
+
+
+
 </body>
 
 </html>
