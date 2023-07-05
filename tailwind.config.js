@@ -9,6 +9,7 @@ module.exports = {
       fontFamily: {
         'space-mono': ['"Space Mono"', 'monospace'],
       },
+
       colors: {
         blue: '#0077ff',
         'broken-blue': '#265f7d',
@@ -20,6 +21,10 @@ module.exports = {
         white: '#ffffff',
         'ghost-white': '#f5f7ff',
       },
+
+      boxShadow: {
+        '3xl': '0 16px 30px -10px rgba(70, 96, 187, 0.2)',
+      }
     },
   },
   plugins: [],
