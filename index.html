@@ -13,34 +13,35 @@
 </head>
 
 <body id="body" class="font-space-mono text-base bg-ghost-white flex justify-center items-center py-[75px] px-24 min-h-screen">
-    <main class="scroll-smooth max-w-[730px] w-full m-0 mx-auto">
+    <main class="scroll-smooth max-w-[730px] w-full m-0 mx-auto flex flex-col gap-8">
 
         <div class="flex justify-between items-center">
             <p class="font-bold text-xl xl:text-3xl">devfinder</p>
             <button class="flex justify-center items-center p-[2.5px] gap-4">
                 <span class="text-true-blue font-bold tracking-[.2em] text-xs md:text-sm" id="theme">DARK</span>
-                
+
                 <img class="h-5" id="theme-icon-dark" src="./assets/icon-moon.svg" alt="dark-theme-icon">
                 <img class="h-5 hidden" id="theme-icon-light" src="./assets/icon-sun.svg" alt="light-theme-icon">
             </button>
         </div>
 
-        <form>
-            <div class="relative">
-                <input type="search" id="username-search" class="block w-full p-5 pl-12 pr-24 text-xs text-gray-900 rounded-2xl bg-white outline-none 
-                md:pl-14 md:text-base md:pr-32" placeholder="Search Github Username..." required style="background-image: url('./assets/icon-search.svg'); background-size: 1.5rem; background-repeat: no-repeat; 
-                background-position-x: 1.25rem; background-position-y: center;">
+        <form class="flex justify-center items-center rounded-2xl w-full shadow-3xl p-2 bg-white">
+            <img class="pl-4 pr-4" src="./assets/icon-search.svg" alt="Search icon">
 
-                <button type="submit" class="text-white bg-blue absolute right-1.5 bottom-1.5 hover:bg-blue-800 rounded-lg text-sm 
-                px-3.5 py-3 md:px-6 md:py-4 md:font-bold">Search</button>
-            </div>
+            <input type="search" id="username-search" class=" text-xs text-oxford-blue rounded-none bg-transparent outline-none flex-1 min-w-0 
+            py-[6px] pr-5 xl:text-base" placeholder="Search Github Username..." required>
+
+            <p class="text-red-500 pr-6 font-bold min-w-[80px] xl:text-base hidden" id="error-search">No Results</p>
+            <p class="text-red-500 pr-6 font-bold min-w-[80px] xl:text-base" id="error-result">Empty Results</p>
+
+            <button type="submit" class="text-white bg-blue hover:bg-blue-800 rounded-lg 
+                text-base font-bold py-[14px] px-6 outline-none cursor-pointer">Search</button>
         </form>
 
         <div class="bg-white rounded-2xl p-8">
             <section class="flex flex-col gap-5 justify-evenly">
                 <div class="flex gap-5">
-                    <img id="user-pic" class="rounded-full w-16" 
-                    src="./assets/octocat.png" alt="github-profile-pic">
+                    <img id="user-pic" class="rounded-full w-16" src="./assets/octocat.png" alt="github-profile-pic">
 
                     <div class="flex flex-row justify-between w-full">
                         <div class="flex flex-col justify-between md:justify-start">
