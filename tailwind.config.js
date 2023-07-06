@@ -24,7 +24,16 @@ module.exports = {
 
       boxShadow: {
         '3xl': '0 16px 30px -10px rgba(70, 96, 187, 0.2)',
-      }
+      },
+      
+      gridTemplateColumns: {
+        'auto': 'repeat(2, minmax(0, auto))',
+      },
+
+      gridTemplateRows: {
+        'auto': 'repeat(2, minmax(0, auto))',
+      },
+
     },
   },
   plugins: [],
