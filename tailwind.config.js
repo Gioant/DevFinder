@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     "./index.html",
-    "./src/js/*.{js}"
+    " ./src/js/*.js"
   ],
   theme: {
     extend: {
@@ -17,7 +17,7 @@ module.exports = {
         'true-blue': '#4B699B',
         'space-cadet': '#1E2B48',
         'gunmetal': '#2A3341',
-        'oxford-blue': '141D2E',
+        'oxford-blue': '#141D2E',
         white: '#ffffff',
         'ghost-white': '#f5f7ff',
       },
@@ -32,7 +32,7 @@ module.exports = {
 
       gridTemplateRows: {
         'auto': 'repeat(2, minmax(0, auto))',
-      },
+      }
 
     },
   },
