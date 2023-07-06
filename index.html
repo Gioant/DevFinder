@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="./src/css/output.css">
 </head>
 
-<body id="body" class="font-space-mono text-base bg-ghost-white flex justify-center items-center py-[75px] px-24 min-h-screen">
+<body id="body" class="animate font-space-mono text-base bg-ghost-white flex justify-center items-center pt-8 px-6 pb-20 md:py-[75px] md:px-24 min-h-screen">
     <main class="scroll-smooth max-w-[730px] w-full m-0 mx-auto flex flex-col gap-8">
 
         <div class="flex justify-between items-center">
-            <p class="font-bold text-xl xl:text-3xl">devfinder</p>
+            <p class="font-bold text-xl md:text-2xl xl:text-3xl">devfinder</p>
             <button class="flex justify-center items-center p-[2.5px] gap-4">
                 <span class="text-true-blue font-bold tracking-[.2em] text-xs md:text-sm" id="theme">DARK</span>
 
@@ -28,11 +28,11 @@
         <form class="flex justify-center items-center rounded-2xl w-full shadow-3xl p-2 bg-white">
             <img class="pl-4 pr-4" src="./assets/icon-search.svg" alt="Search icon">
 
-            <input type="search" id="username-search" class=" text-xs text-oxford-blue rounded-none bg-transparent outline-none flex-grow min-w-0 
-            py-[6px] pr-5 xl:text-base" placeholder="Search Github Username..." required>
+            <input type="search" id="username-search" class="text-sm md:text-lg text-oxford-blue rounded-none bg-transparent outline-none flex-grow min-w-0 
+            py-[6px] pr-5" placeholder="Search Github Username..." required>
 
             <p class="text-red-500 pr-6 font-bold min-w-[80px] xl:text-base hidden" id="error-search">No Results</p>
-            <p class="text-red-500 pr-6 font-bold min-w-[80px] xl:text-base" id="error-result">Empty Results</p>
+            <p class="text-red-500 pr-6 font-bold min-w-[80px] xl:text-base hidden" id="error-result">Empty Results</p>
 
             <button type="submit" class="text-white bg-blue hover:bg-blue-800 rounded-lg 
                 text-base font-bold py-[14px] px-6 outline-none cursor-pointer">Search</button>
@@ -44,9 +44,9 @@
                 <div class="grid items-center justify-between grid-cols-auto grid-rows-auto gap-y-0.5">
                     <img id="user-pic-mobile" class="block sm:hidden rounded-full 2xl:w-[120px] mr-9" src="./assets/octocat.png" alt="user-img-mobile" />
 
-                    <h1 class="font-bold text-gunmetal xl:text-3xl" id="Name">The Octocat</h1>
-                    <time class="text-sm text-glaucous xl:text-base" id="date-joined">Joined 25 Jan 2011</time>
-                    <h3 class="text-sm text-sky-500 xl:text-base" id="username">@octocat</h3>
+                    <h1 class="font-bold text-gunmetal md:text-3xl" id="Name">The Octocat</h1>
+                    <time class="text-sm text-glaucous md:text-[15px]" id="date-joined">Joined 25 Jan 2011</time>
+                    <h3 class="text-sm text-sky-500 md:text-lg" id="username">@octocat</h3>
                 </div>
 
                 <p class="font-mono text-base text-glaucous opacity-50 py-8 my-2" id="bio">
