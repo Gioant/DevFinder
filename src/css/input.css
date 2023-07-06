@@ -1,11 +1,17 @@
 @tailwind base;
 @tailwind components;
+
+
+.animate {
+    transition: all 0.2s ease-in-out;
+}
+
 @tailwind utilities;
 
 
 @layer components{
     .card-stats {
-        @apply flex flex-col gap-2;
+        @apply flex flex-col gap-0.5;
     }
     .github-info {
         @apply font-bold text-space-cadet text-sm md:text-xl;
