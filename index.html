@@ -28,7 +28,7 @@
         <form class="flex justify-center items-center rounded-2xl w-full shadow-3xl p-2 bg-white">
             <img class="pl-4 pr-4" src="./assets/icon-search.svg" alt="Search icon">
 
-            <input type="search" id="username-search" class=" text-xs text-oxford-blue rounded-none bg-transparent outline-none flex-1 min-w-0 
+            <input type="search" id="username-search" class=" text-xs text-oxford-blue rounded-none bg-transparent outline-none flex-grow min-w-0 
             py-[6px] pr-5 xl:text-base" placeholder="Search Github Username..." required>
 
             <p class="text-red-500 pr-6 font-bold min-w-[80px] xl:text-base hidden" id="error-search">No Results</p>
@@ -38,25 +38,22 @@
                 text-base font-bold py-[14px] px-6 outline-none cursor-pointer">Search</button>
         </form>
 
-        <div class="bg-white rounded-2xl p-8">
-            <section class="flex flex-col gap-5 justify-evenly">
-                <div class="flex gap-5">
-                    <img id="user-pic" class="rounded-full w-16" src="./assets/octocat.png" alt="github-profile-pic">
+        <div class="flex justify-center items-start bg-white rounded-2xl p-12 shadow-3xl">
+            <img id="user-pic" class="rounded-full 2xl:w-[120px] mr-9 hidden sm:block" src="./assets/octocat.png" alt="github-profile-pic">
+            <section class="flex-grow">
+                <div class="grid items-center justify-between grid-cols-auto grid-rows-auto gap-y-0.5">
+                    <img id="user-pic-mobile" class="block sm:hidden rounded-full 2xl:w-[120px] mr-9" src="./assets/octocat.png" alt="user-img-mobile" />
 
-                    <div class="flex flex-row justify-between w-full">
-                        <div class="flex flex-col justify-between md:justify-start">
-                            <h2 class="font-bold text-lg text-gunmetal xl:text-[26px]" id="Name">The Octocat</h2>
-                            <p class="text-sm text-sky-500 md:text-base" id="username">@octocat</p>
-                        </div>
-                        <p class="text-sm text-glaucous pt-1 md:text-base" id="date-joined">Joined 25 Jan 2011</p>
-                    </div>
+                    <h1 class="font-bold text-gunmetal xl:text-3xl" id="Name">The Octocat</h1>
+                    <time class="text-sm text-glaucous xl:text-base" id="date-joined">Joined 25 Jan 2011</time>
+                    <h3 class="text-sm text-sky-500 xl:text-base" id="username">@octocat</h3>
                 </div>
 
-                <p class="font-mono text-xs text-glaucous opacity-50 py-6 md:text-sm" id="bio">
+                <p class="font-mono text-base text-glaucous opacity-50 py-8 my-2" id="bio">
                     This profile has no bio
                 </p>
 
-                <div class="bg-ghost-white rounded-lg text-xs py-6 flex justify-around text-center md:text-sm">
+                <div class="bg-ghost-white rounded-[10px] text-sm flex justify-between md:items-start px-8 py-6 mb-9">
                     <div class="card-stats">
                         <p class="text-glaucous">Repos</p>
                         <span class="github-info" id="repo-info">8</span>
@@ -74,15 +71,10 @@
                 </div>
 
 
-                <ul class="flex flex-col gap-4 font-mono text-xs text-glaucous pt-6 md:text-base">
-                    <li class="flex align-middle gap-2">
+                <ul class="flex flex-col gap-4 text-glaucous text-sm md:text-base lg:grid lg:grid-cols-auto lg:grid-rows-auto lg:gap-[18px]">
+                    <li class="flex align-middle gap-2.5">
                         <img class="pl-1" src="./assets/icon-location.svg" alt="location-icon" id="loc-icon">
                         <p id="user-location">San Francisco</p>
-                    </li>
-
-                    <li class="flex align-middle gap-2">
-                        <img src="./assets/icon-website.svg" alt="website-icon" id="site-icon">
-                        <p id="user-website">https://github.blog</p>
                     </li>
 
                     <li class="flex align-middle gap-2">
@@ -91,11 +83,15 @@
                     </li>
 
                     <li class="flex align-middle gap-2">
+                        <img src="./assets/icon-website.svg" alt="website-icon" id="site-icon">
+                        <p id="user-website">https://github.blog</p>
+                    </li>
+
+                    <li class="flex align-middle gap-2">
                         <img src="./assets/icon-company.svg" alt="company-icon" id="company-icon">
                         <p id="user-company">@github</p>
                     </li>
                 </ul>
-
             </section>
         </div>
     </main>
