@@ -50,12 +50,15 @@
             <section class="flex-grow">
 
                 <div class="grid justify-start items-center grid-rows-auto3 grid-cols-auto2 gap-y-0 lg:justify-between lg:grid-rows-auto2 lg:gap-y-0.5">
-                    <img id="user-pic-mobile" class="row-span-3 col-start-1 col-end-2 block lg:hidden h-[75px] rounded-full md:w-[120px] md:h-[120px] mr-5" src="./assets/octocat.png"
+                    <img id="user-pic-mobile" class="row-span-3 col-start-1 col-end-2 block lg:hidden h-[75px] rounded-full md:w-[120px] md:h-[120px] mr-5 md:mr-8" src="./assets/octocat.png"
                         alt="user-img-mobile" />
 
-                    <h1 class="font-bold text-gunmetal self-center md:text-3xl" id="Name">The Octocat</h1>
-                    <time class="text-sm text-glaucous self-center md:text-[15px] md:text-sm" id="date-joined">Joined 25 Jan 2011</time>
-                    <h3 class="text-sm text-sky-500 col-start-2 col-end-3 row-start-2 row-end-3 md:text-lg" id="username">@octocat</h3>
+                    <h1 class="font-bold text-gunmetal self-end md:text-3xl md:leading-7 lg:leading-9" id="Name">The Octocat</h1>
+
+                    <time class="text-sm text-glaucous self-start md:text-[15px] md:self-center" id="date-joined">Joined 25 Jan 2011</time>
+
+                    <h3 class="text-sm text-sky-500 self-center col-start-2 col-end-3 row-start-2 row-end-3 
+                    md:text-lg md:col-start-auto md:col-end-auto md:row-start-auto md:row-end-auto" id="username">@octocat</h3>
                 </div>
 
                 <p class="font-mono text-sm md:text-base text-glaucous opacity-50 py-8 md:my-2" id="bio">
@@ -64,23 +67,23 @@
 
                 <div class="bg-ghost-white py-4 mb-9 rounded-[10px] text-sm flex justify-evenly md:justify-between items-start md:px-8 md:py-6">
                     <div class="card-stats">
-                        <p class="text-glaucous text-xs md:text-base">Repos</p>
+                        <p class="text-glaucous text-xs md:text-sm">Repos</p>
                         <span class="github-info" id="repo-info">8</span>
                     </div>
 
                     <div class="card-stats">
-                        <p class="text-glaucous text-xs md:text-base">Followers</p>
+                        <p class="text-glaucous text-xs md:text-sm">Followers</p>
                         <span class="github-info" id="followers-info">3938</span>
                     </div>
 
                     <div class="card-stats">
-                        <p class="text-glaucous text-xs md:text-base">Following</p>
+                        <p class="text-glaucous text-xs md:text-sm">Following</p>
                         <span class="github-info" id="following-info">9</span>
                     </div>
                 </div>
 
 
-                <ul class="flex flex-col gap-4 text-glaucous text-sm md:text-base lg:grid lg:grid-cols-auto2 lg:grid-rows-auto2 lg:gap-[18px]">
+                <ul class="flex flex-col gap-4 text-glaucous text-sm md:text-base md:grid md:grid-cols-auto2 md:grid-rows-auto2 md:gap-[18px]">
                     <li class="flex align-middle gap-2.5">
                         <img class="pl-1" src="./assets/icon-location.svg" alt="location-icon" id="loc-icon">
                         <p id="user-location">San Francisco</p>
