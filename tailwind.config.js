@@ -33,7 +33,7 @@ module.exports = {
 
       gridTemplateRows: {
         'auto2': 'repeat(2, auto)',
-        'auto3': 'auto 20px auto',
+        'auto3': 'auto auto auto',
       }
       
 
