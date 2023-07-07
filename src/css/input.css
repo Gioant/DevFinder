@@ -11,9 +11,9 @@
 
 @layer components{
     .card-stats {
-        @apply flex flex-col gap-0.5;
+        @apply flex flex-col gap-2 items-center md:gap-2 md:items-start;
     }
     .github-info {
-        @apply font-bold text-space-cadet text-sm md:text-xl;
+        @apply font-bold text-space-cadet text-base md:text-[22px] leading-8;
     }
 }
