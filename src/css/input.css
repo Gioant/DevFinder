@@ -1,11 +1,5 @@
 @tailwind base;
 @tailwind components;
-
-
-.animate {
-    transition: all 0.2s ease-in-out;
-}
-
 @tailwind utilities;
 
 
@@ -16,4 +10,8 @@
     .github-info {
         @apply font-bold text-space-cadet text-base md:text-[22px] leading-8;
     }
+}
+
+* {
+    transition: all 0.2s ease-in-out;
 }
