@@ -27,12 +27,15 @@ module.exports = {
       },
       
       gridTemplateColumns: {
-        'auto': 'repeat(2, minmax(0, auto))',
+        'auto2': 'repeat(2, auto)',
+        'auto3': 'repeat(3, auto)',
       },
 
       gridTemplateRows: {
-        'auto': 'repeat(2, minmax(0, auto))',
+        'auto2': 'repeat(2, auto)',
+        'auto3': 'auto 20px auto',
       }
+      
 
     },
   },
