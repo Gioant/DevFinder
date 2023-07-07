@@ -55,17 +55,20 @@
 
                     <h1 class="font-bold text-gunmetal self-end md:text-3xl md:leading-7 lg:leading-9" id="Name">The Octocat</h1>
 
-                    <time class="text-sm text-glaucous self-start md:text-[15px] md:self-center" id="date-joined">Joined 25 Jan 2011</time>
+                    <time class="text-sm text-glaucous self-start 
+                    md:text-[15px] md:self-start lg:self-center" id="date-joined">Joined 25 Jan 2011</time>
 
-                    <h3 class="text-sm text-sky-500 self-center col-start-2 col-end-3 row-start-2 row-end-3 
-                    md:text-lg md:col-start-auto md:col-end-auto md:row-start-auto md:row-end-auto" id="username">@octocat</h3>
+                    <h3 class="text-sm text-sky-500 self-center 
+                    col-start-2 col-end-3 row-start-2 row-end-3 lg:hidden block md:text-base" id="username">@octocat</h3>
+                    
+                    <h3 class="text-lg text-sky-500 self-center lg:block hidden" id="username2">@octocat</h3>
                 </div>
 
                 <p class="font-mono text-sm md:text-base text-glaucous opacity-50 py-8 md:my-2" id="bio">
                     This profile has no bio
                 </p>
 
-                <div class="bg-ghost-white py-4 mb-9 rounded-[10px] text-sm flex justify-evenly md:justify-between items-start md:px-8 md:py-6">
+                <div class="bg-ghost-white py-4 mb-9 rounded-[10px] text-sm flex justify-around md:justify-between items-start md:px-8 md:py-6">
                     <div class="card-stats">
                         <p class="text-glaucous text-xs md:text-sm">Repos</p>
                         <span class="github-info" id="repo-info">8</span>
