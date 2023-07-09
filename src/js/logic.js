@@ -1,3 +1,9 @@
+// theme check on initial load
+document.addEventListener("DOMContentLoaded", () => {
+    themeCheck();
+});
+
+
 const body = document.getElementById('body');
 
 //icons
@@ -20,12 +26,9 @@ const iconToggle = () => {
 const themeCheck = () => {
     if (userTheme === "dark" || (!userTheme && systemTheme)) {
         document.documentElement.classList.add("dark");
-        themeColortxt.innerHTML = "LIGHT";
         moonIcon.classList.add("display-none");
-        return;
     } else {
         sunIcon.classList.add("display-none");
-        themeColortxt.innerHTML = "DARK";
     }
 }
 
@@ -35,11 +38,12 @@ const switchTheme = () => {
         document.documentElement.classList.remove("dark");
         localStorage.setItem("theme", "light");
         iconToggle();
-        return
+        themeColortxt.innerHTML = "DARK";
     } else {
         document.documentElement.classList.add("dark");
         localStorage.setItem("theme", "dark");
         iconToggle();
+        themeColortxt.innerHTML = "LIGHT";
     }
 }
 
@@ -51,7 +55,3 @@ sunIcon.addEventListener("click", () => {
 addEventListener("click", () => {
     switchTheme();
 });
-
-
-// theme check on initial load
-themeCheck();
