@@ -18,7 +18,7 @@
 
         <div class="flex justify-between items-center">
             <p class="font-bold text-xl md:text-2xl xl:text-3xl dark:text-white">devfinder</p>
-            <button class="flex justify-center items-center p-[2.5px] gap-4">
+            <button class="flex justify-center items-center p-[2.5px] gap-4" onclick="switchTheme()">
                 <span class="text-true-blue font-bold tracking-[.2em] text-xs md:text-sm dark:text-white" id="color-theme">DARK</span>
 
                 <img class="h-5" id="dark-theme-toggle" src="./assets/icon-moon.svg" alt="dark-theme-icon">
@@ -26,11 +26,11 @@
             </button>
         </div>
 
-        <form class="flex justify-center items-center rounded-2xl w-full shadow-3xl p-1.5 md:p-2 bg-white dark:bg-space-cadet">
+        <form class="flex justify-center items-center rounded-2xl w-full shadow-3xl p-1.5 md:p-2 bg-white dark:bg-space-cadet dark:shadow-none">
             <img class="pl-1 pr-1.5 h-4 md:h-5 md:pl-4 md:pr-4" src="./assets/icon-search.svg" alt="Search icon">
 
             <input type="search" id="username-search" class="text-xs md:text-base xl:text-lg text-oxford-blue rounded-none bg-transparent outline-none flex-grow min-w-0 
-            py-[6px] pr-1.5 placeholder-glaucous " placeholder="Search Github Username..." required>
+            py-[6px] pr-1.5 placeholder-glaucous dark:placeholder-white dark:text-white" placeholder="Search Github Username..." required>
 
             <button type="submit" class="text-white bg-blue hover:bg-blue-800 rounded-lg 
                 text-xs font-bold py-[14px] px-4 outline-none cursor-pointer md:text-base md:px-6">Search</button>
@@ -46,7 +46,7 @@
             </div>
         </div>
 
-        <div class="flex justify-center items-start bg-white rounded-2xl py-8 px-5 md:p-10 lg:p-12 shadow-3xl dark:bg-space-cadet">
+        <div class="flex justify-center items-start bg-white rounded-2xl py-8 px-5 md:p-10 lg:p-12 shadow-3xl dark:bg-space-cadet dark:shadow-none">
             <img id="user-pic" class="rounded-full md:w-[120px] mr-9 hidden lg:block" src="./assets/octocat.png" alt="github-profile-pic">
             <section class="flex-grow">
 
@@ -54,58 +54,57 @@
                     <img id="user-pic-mobile" class="row-span-3 col-start-1 col-end-2 block lg:hidden h-[75px] rounded-full md:w-[120px] md:h-[120px] mr-5 md:mr-8"
                         src="./assets/octocat.png" alt="user-img-mobile" />
 
-                    <h1 class="font-bold text-gunmetal self-end md:text-3xl md:leading-7 lg:leading-9" id="Name">The Octocat</h1>
+                    <h1 class="font-bold text-gunmetal self-end md:text-3xl md:leading-7 lg:leading-9 dark:text-white" id="Name">The Octocat</h1>
 
                     <time class="text-sm text-glaucous self-start 
-                    md:text-[15px] md:self-start lg:self-center " id="date-joined">Joined 25 Jan 2011</time>
+                    md:text-[15px] md:self-start lg:self-center dark:text-white" id="date-joined">Joined 25 Jan 2011</time>
 
-                    <h3 class="text-sm text-sky-500 self-center 
+                    <h3 class="text-sm text-blue self-center 
                     col-start-2 col-end-3 row-start-2 row-end-3 lg:hidden block md:text-base " id="username">@octocat</h3>
 
-                    <h3 class="text-lg text-sky-500 self-center lg:block hidden " id="username2">@octocat</h3>
+                    <h3 class="text-lg text-blue self-center lg:block hidden " id="username2">@octocat</h3>
                 </div>
 
-                <p class="font-mono text-sm md:text-base text-glaucous opacity-50 py-8 md:my-2 " id="bio">
+                <p class="font-mono text-sm md:text-base text-glaucous opacity-50 py-8 md:my-2 dark:text-white" id="bio">
                     This profile has no bio
                 </p>
 
                 <div class="bg-ghost-white py-4 mb-9 rounded-[10px] text-sm flex justify-around items-start 
                 md:justify-between md:px-8 md:py-6 dark:bg-oxford-blue">
                     <div class="card-stats">
-                        <p class="text-glaucous text-xs md:text-sm ">Repos</p>
-                        <span class="github-info " id="repo-info">8</span>
+                        <p class="text-glaucous text-xs md:text-sm dark:text-white">Repos</p>
+                        <span class="github-info dark:text-white" id="repo-info">8</span>
                     </div>
 
                     <div class="card-stats">
-                        <p class="text-glaucous text-xs md:text-sm ">Followers</p>
-                        <span class="github-info " id="followers-info">3938</span>
+                        <p class="text-glaucous text-xs md:text-sm dark:text-white">Followers</p>
+                        <span class="github-info dark:text-white" id="followers-info">3938</span>
                     </div>
 
                     <div class="card-stats">
-                        <p class="text-glaucous text-xs md:text-sm ">Following</p>
-                        <span class="github-info " id="following-info">9</span>
+                        <p class="text-glaucous text-xs md:text-sm dark:text-white">Following</p>
+                        <span class="github-info dark:text-white" id="following-info">9</span>
                     </div>
                 </div>
 
 
-                <ul class="flex flex-col gap-4 text-glaucous text-sm
-                 md:text-base md:grid md:grid-cols-auto2 md:grid-rows-auto2 md:gap-[18px] ">
-                    <li class="flex align-middle gap-2.5">
+                <ul class="flex flex-col gap-4 text-glaucous text-sm md:text-base md:grid md:grid-cols-auto2 md:grid-rows-auto2 md:gap-[18px] dark:text-white">
+                    <li class="flex align-middle gap-2.5 md:gap-4">
                         <img class="pl-1" src="./assets/icon-location.svg" alt="location-icon" id="loc-icon">
                         <p id="user-location">San Francisco</p>
                     </li>
 
-                    <li class="flex align-middle gap-2">
+                    <li class="flex align-middle gap-2 md:gap-4">
                         <img src="./assets/icon-twitter.svg" alt="twitter-icon" id="twitter-icon">
                         <p id="user-twitter">Not Available</p>
                     </li>
 
-                    <li class="flex align-middle gap-2">
+                    <li class="flex align-middle gap-2 md:gap-4">
                         <img src="./assets/icon-website.svg" alt="website-icon" id="site-icon">
                         <p id="user-website">https://github.blog</p>
                     </li>
 
-                    <li class="flex align-middle gap-2">
+                    <li class="flex align-middle gap-2 md:gap-4">
                         <img src="./assets/icon-company.svg" alt="company-icon" id="company-icon">
                         <p id="user-company">@github</p>
                     </li>
