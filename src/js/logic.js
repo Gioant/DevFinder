@@ -46,12 +46,3 @@ const switchTheme = () => {
         themeColortxt.innerHTML = "LIGHT";
     }
 }
-
-//add event listeners to buttons
-sunIcon.addEventListener("click", () => {
-    switchTheme();
-});
-
-addEventListener("click", () => {
-    switchTheme();
-});
