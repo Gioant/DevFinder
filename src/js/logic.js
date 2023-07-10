@@ -27,8 +27,10 @@ const themeCheck = () => {
     if (userTheme === "dark" || (!userTheme && systemTheme)) {
         document.documentElement.classList.add("dark");
         moonIcon.classList.add("display-none");
+        themeColortxt.innerHTML = "LIGHT";
     } else {
         sunIcon.classList.add("display-none");
+        themeColortxt.innerHTML = "DARK";
     }
 }
 
@@ -46,3 +48,17 @@ const switchTheme = () => {
         themeColortxt.innerHTML = "LIGHT";
     }
 }
+
+
+/* 
+1) get username value from input
+
+2) send a request to github api
+
+3) if/else condition to check status of response... if it's good, read json object. else return error
+
+4) replace html elements (followers, following, repos, avatar & links);
+
+*/
+
+//logic for submit form
