@@ -62,3 +62,46 @@ const switchTheme = () => {
 */
 
 //logic for submit form
+function formSubmit(e){
+    e.preventDefault();
+
+    //TO DO: check for errors (NULL)
+
+    let username = document.getElementById('username-search').value;
+
+    let trimmedUsername = username.trim();
+    
+    // if (trimmedUsername === ""){
+    //     //display error
+    // }
+
+    //fetch user by github API
+    getUser(trimmedUsername)
+}
+
+// function to fetch user by username
+async function getUser(username){
+    try {
+        //wait for entire response from api
+        let response = await fetch(`https://api.github.com/users/${username}`);
+
+        let responseObject = await response.json();
+
+        if(response.status === 200){
+            return updateUser(responseObject);
+        } else {
+            //response failed to do: show error
+        }
+    } catch (error) {
+        //to change later
+        return console.log(err);
+    }
+}
+
+//get info from user & update page
+function updateUser(user){
+    const joinedAt = user.created_at.substring(0,10);
+
+    
+}
+
