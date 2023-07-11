@@ -100,8 +100,11 @@ async function getUser(username){
 
 //get info from user & update page
 function updateUser(user){
-    const joinedAt = user.created_at.substring(0,10);
+    const dateProperty = user.created_at.substring(0,10);
 
-    
+    const formatDate = luxon.DateTime.fromISO(dateProperty).toFormat("d MMM yyyy");
+
+    const joinedAt = `Joined ${formatDate}`;
+
 }
 
