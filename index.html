@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/output.css">
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
 </head>
 
 <body id="body" class="font-space-mono text-base bg-ghost-white flex justify-center items-center pt-8 px-6 pb-20 md:py-[75px] md:px-24 min-h-screen 
@@ -26,17 +27,18 @@
             </button>
         </div>
 
-        <form class="flex justify-center items-center rounded-2xl w-full shadow-3xl p-1.5 md:p-2 bg-white dark:bg-space-cadet dark:shadow-none">
+        <form method="post" onsubmit="formSubmit(event);"
+            class="flex justify-center items-center rounded-2xl w-full shadow-3xl p-1.5 md:p-2 bg-white dark:bg-space-cadet dark:shadow-none">
             <img class="pl-1 pr-1.5 h-4 md:h-5 md:pl-4 md:pr-4" src="./assets/icon-search.svg" alt="Search icon">
 
-            <input type="search" id="username-search" class="text-xs md:text-base xl:text-lg text-oxford-blue rounded-none bg-transparent outline-none flex-grow min-w-0 
-            py-[6px] pr-1.5 placeholder-glaucous dark:placeholder-white dark:text-white" placeholder="Search Github Username..." required>
+            <input type="text" id="username-search" class="text-xs md:text-base xl:text-lg text-oxford-blue rounded-none bg-transparent outline-none flex-grow min-w-0 
+            py-[6px] pr-1.5 placeholder-glaucous dark:placeholder-white dark:text-white" placeholder="Search Github Username..." autocomplete="off" required>
 
-            <button type="submit" class="text-white bg-blue hover:bg-blue-800 rounded-lg 
+            <button type="submit" id="search-btn" class="text-white bg-blue hover:bg-blue-800 rounded-lg 
                 text-xs font-bold py-[14px] px-4 outline-none cursor-pointer md:text-base md:px-6">Search</button>
         </form>
 
-        <div role="alert" class="hidden" id="error-container">
+        <!-- <div role="alert" class="hidden" id="error-container">
             <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2" id="Error-Title">
                 Error: No Results
             </div>
@@ -44,7 +46,7 @@
                 <p class="font-bold min-w-[80px] text-sm xl:text-base hidden" id="error-search">User Does Not Exist</p>
                 <p class="font-bold min-w-[80px] text-sm xl:text-base hidden" id="error-result">Empty Results</p>
             </div>
-        </div>
+        </div> -->
 
         <div class="flex justify-center items-start bg-white rounded-2xl py-8 px-5 md:p-10 lg:p-12 shadow-3xl dark:bg-space-cadet dark:shadow-none">
             <img id="user-pic" class="rounded-full md:w-[120px] mr-9 hidden lg:block" src="./assets/octocat.png" alt="github-profile-pic">
@@ -54,7 +56,7 @@
                     <img id="user-pic-mobile" class="row-span-3 col-start-1 col-end-2 block lg:hidden h-[75px] rounded-full md:w-[120px] md:h-[120px] mr-5 md:mr-8"
                         src="./assets/octocat.png" alt="user-img-mobile" />
 
-                    <h1 class="font-bold text-gunmetal self-end md:text-3xl md:leading-7 lg:leading-9 dark:text-white" id="Name">The Octocat</h1>
+                    <h1 class="font-bold text-sm text-gunmetal self-end md:text-3xl md:leading-7 lg:leading-9 dark:text-white" id="fullName">The Octocat</h1>
 
                     <time class="text-sm text-glaucous self-start 
                     md:text-[15px] md:self-start lg:self-center dark:text-white" id="date-joined">Joined 25 Jan 2011</time>
@@ -65,7 +67,7 @@
                     <h3 class="text-lg text-blue self-center lg:block hidden " id="username2">@octocat</h3>
                 </div>
 
-                <p class="font-mono text-sm md:text-base text-glaucous opacity-50 py-8 md:my-2 dark:text-white dark:opacity-90" id="bio">
+                <p class="font-mono text-sm md:text-base text-glaucous py-8 md:my-2 dark:text-white" id="bio">
                     This profile has no bio
                 </p>
 
@@ -89,7 +91,7 @@
 
 
                 <ul class="flex flex-col gap-4 text-glaucous text-sm md:text-base md:grid md:grid-cols-auto2 md:grid-rows-auto2 md:gap-[18px]">
-                    <li class="flex align-middle gap-2.5 md:gap-4 dark:text-white">
+                    <li class="flex items-center gap-2.5 md:gap-4 dark:text-white">
                         <svg height="20" width="14" xmlns="http://www.w3.org/2000/svg" class="ml-1">
                             <path d="M12.797 3.425C11.584 1.33 9.427.05 7.03.002a7.483 7.483 0 00-.308 0C4.325.05 2.17 1.33.955 3.425a6.963 6.963 0 00-.09 6.88l4.959 
                                 9.077.007.012c.218.38.609.606 1.045.606.437 0 .828-.226 1.046-.606l.007-.012 4.96-9.077a6.963 6.963 0 00-.092-6.88zm-5.92 5.638c-1.552 
@@ -99,7 +101,7 @@
                         <p id="user-location">San Francisco</p>
                     </li>
 
-                    <li class="flex align-middle gap-2 md:gap-4 dark:text-white">
+                    <li class="flex items-center gap-2 md:gap-4 dark:text-white">
                         <svg height="18" width="20" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M20 2.799a8.549 8.549 0 01-2.363.647 4.077 4.077 0 001.804-2.266 8.194 8.194 0 01-2.6.993A4.099 4.099 0 
@@ -108,10 +110,10 @@
                                 0 01.981 15.34 7.68 7.68 0 010 15.285a11.543 11.543 0 006.29 1.84c7.545 0 11.67-6.25 11.67-11.667 0-.182-.006-.357-.015-.53A8.18 8.18 0 0020 2.798z"
                                 fill="#4b6a9b" class="dark:fill-white" id="twitter-icon" />
                         </svg>
-                        <p id="user-twitter-text"><a href="#" class="hover:underline" id="user-twitter" target="_blank" rel="noreferrer">Not Available</a></p>
+                        <p><a href="#" class="hover:underline" id="user-twitter" target="_blank" rel="noreferrer">Not Available</a></p>
                     </li>
 
-                    <li class="flex align-middle gap-2 md:gap-4 dark:text-white">
+                    <li class="flex items-center gap-2 md:gap-4 dark:text-white">
                         <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
                             <g fill="#4b6a9b" class="dark:fill-white" id="site-icon">
                                 <path d="M7.404 5.012c-2.355 2.437-1.841 6.482.857 8.273.089.06.207.048.283-.027.568-.555 1.049-1.093 1.47-1.776a.213.213 0 00-.084-.3A2.743
@@ -125,14 +127,13 @@
                                     2.083 5.57 2.048 7.653-.078.723-.81 3.821-3.678 4.195-4.577z" />
                             </g>
                         </svg>
-                        <p id="user-website-text"><a href="https://github.blog" class="hover:underline" id="user-site" target="_blank" rel="noreferrer">https://github.blog</a></p>
+                        <p><a href="https://github.blog" class="hover:underline" id="user-site" target="_blank" rel="noreferrer">https://github.blog</a></p>
                     </li>
 
-                    <li class="flex align-middle gap-2 md:gap-4 dark:text-white">
+                    <li class="flex items-center gap-2 md:gap-4 dark:text-white">
                         <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
                             <g fill="#4b6a9b" class="dark:fill-white" id="company-icon">
-                                <path
-                                    d="M10.858 1.558L1.7.167A1.477 1.477 0 00.517.492 1.49 1.49 0 000 1.608v17.559c0 .458.375.833.833.833h2.709v-4.375c0-.808.65-1.458 
+                                <path d="M10.858 1.558L1.7.167A1.477 1.477 0 00.517.492 1.49 1.49 0 000 1.608v17.559c0 .458.375.833.833.833h2.709v-4.375c0-.808.65-1.458 
                                     1.458-1.458h2.083c.809 0 1.459.65 1.459 1.458V20h3.541V3a1.46 1.46 0 00-1.225-1.442zM4.583 12.292h-1.25a.625.625 0 010-1.25h1.25a.625.625 0 
                                     010 1.25zm0-2.5h-1.25a.625.625 0 010-1.25h1.25a.625.625 0 010 1.25zm0-2.5h-1.25a.625.625 0 010-1.25h1.25a.625.625 0 010 
                                     1.25zm0-2.5h-1.25a.625.625 0 010-1.25h1.25a.625.625 0 010 1.25zm4.167 7.5H7.5a.625.625 0 010-1.25h1.25a.625.625 0 010 1.25zm0-2.5H7.5a.625.625 
@@ -142,7 +143,7 @@
                                     010 1.25z" />
                             </g>
                         </svg>
-                        <p id="user-company-text"><a href="#" class="hover:underline" id="user-company" target="_blank" rel="noreferrer">@github</a></p>
+                        <p><a href="https://github.com/github" class="hover:underline" id="user-company" target="_blank" rel="noreferrer">@github</a></p>
                     </li>
                 </ul>
             </section>
