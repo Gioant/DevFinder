@@ -1,6 +1,6 @@
 # DevFinder
 
-![Design preview for the GitHub user search app coding challenge](./design/preview.jpg)
+![Design preview for the GitHub user search app coding challenge](./design/preview.jpeg)
 
 DevFinder is a web app that allows you to search for Github users and view their profiles using github's API.
 
